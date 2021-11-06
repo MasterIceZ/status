@@ -1,5 +1,7 @@
 import linenotif
 import requests
+import os
+import datetime
 
 reps = [
     "table",
@@ -22,3 +24,4 @@ for url in reps:
         a.append(name + ' : DOWN')
 s = "\n".join(a)
 print('### Status\n' + s)
+print('Latest Update : ' + datetime.datetime.now())
