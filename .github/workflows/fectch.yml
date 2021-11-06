@@ -1,0 +1,42 @@
+name: Test
+on:
+    schedule:
+        - cron: "0 * * * *"
+    push:
+        branches: [ main ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: 3.9
+            - name: Set Timezone
+              uses: szenius/set-timezone@v1.0
+              with:
+                timezoneLinux: "Asia/Thailand" 
+            - name: test
+              if: github.event.commits[0].message != 'Commit Response'
+              env: 
+                LINE_TOKEN: ${{ secrets.LINE_TOKEN }}
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install requests
+                  pip install pytz
+                  pip install linenotif
+                  python main.py > README.md
+            - name: Commit test
+              run: |
+                  git config --global user.email "icy-bot@users.noreply.github.com"
+                  git config --global user.name "Borworntat Dendumrongkul"
+                  git add .
+                  git commit -m "Commit Response" -a
+            - name: Push Changes
+              if: github.event.commits[0].message != 'Commit Response'
+              uses: ad-m/github-push-action@master
+              with:
+                   github_token: ${{ secrets.ACCESS_TOKEN }}
+                   branch: main
