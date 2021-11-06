@@ -24,4 +24,4 @@ for url in reps:
         a.append(name + ' : DOWN')
 s = "\n".join(a)
 print('### Status\n' + s)
-print('Latest Update : ' + datetime.datetime.now())
+print('Latest Update : ' + str(datetime.datetime.now()))
