@@ -22,6 +22,8 @@ for url in reps:
     else:
         noti.send(name + ' down!')
         a.append(name + ' : DOWN')
-s = "\n".join(a)
-print('### Status\n' + s)
+print('### Status\n')
+print('')
+for i in a:
+    print(i + "  ")
 print('Latest Update : ' + str(datetime.datetime.now()))
