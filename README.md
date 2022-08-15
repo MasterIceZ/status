@@ -1,7 +1,7 @@
 ### Status
 
 
-table : OK  
+table : DOWN  
 hogwarts : OK  
 icy-bot : OK  
-Latest Update : 2022-08-15 12:18:14.530607
+Latest Update : 2022-08-15 13:36:05.797365
