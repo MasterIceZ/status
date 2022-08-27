@@ -2,6 +2,6 @@
 
 
 table : OK  
-hogwarts : DOWN  
+hogwarts : OK  
 icy-bot : OK  
-Latest Update : 2022-08-27 09:10:30.125037
+Latest Update : 2022-08-27 10:09:27.812932
