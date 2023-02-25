@@ -3,5 +3,5 @@
 
 table : OK  
 hogwarts : OK  
-icy-bot : OK  
-Latest Update : 2023-02-25 15:07:20.745970
+icy-bot : DOWN  
+Latest Update : 2023-02-25 16:11:43.416379
