@@ -4,4 +4,4 @@
 table : OK  
 hogwarts : OK  
 icy-bot : DOWN  
-Latest Update : 2023-11-25 19:05:53.066315
+Latest Update : 2023-11-25 20:07:46.554683
